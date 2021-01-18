@@ -1,0 +1,1216 @@
+html {
+  background-image: url("../images/plage1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.googleCalendar {
+  position: relative;
+
+}
+
+#histoire1 {
+  font-size: 10px;
+}
+
+.menu1 {
+  position: fixed;
+  height: 2em;
+  background-color: rgb(59, 182, 59);
+  padding-top: 5em;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.menu1 li {
+  display: inline-block;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.menu2 {
+  position: fixed;
+  height: 2em;
+  background-color: rgb(59, 182, 59);
+  padding-top: 5em;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.menu2 li {
+  display: inline-block;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  border-radius: 13%;
+}
+
+
+
+
+.card-container .card {
+  height: 350px;
+  border: solid 1px #f2f2f2;
+  margin: 5px;
+  background-color: yellow;
+  border-radius: 13%;
+}
+
+.card-container .card .card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-container .card img.card-img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-top-left-radius: 13%;
+  border-top-right-radius: 13%;
+}
+
+
+
+.header .logo a {
+  color: rgba(251, 255, 0, 0.884);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Formulaire */
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 300px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border-radius: 1em;
+}
+
+form div+div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 200px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px;
+  /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
+
+a {
+  color: black;
+}
+
+label {
+  left: 12em;
+}
+
+/* header */
+
+.header {
+  background-color: rgb(59, 182, 59);
+  /* box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, .1); */
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  padding: 0%;
+  margin: 0%;
+  height: auto;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgb(59, 182, 59);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 0px solid rgb(59, 182, 59);
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: greenyellow;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  border-bottom: 5px solid black;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: fixed;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 300px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+footer {
+
+  background-color: rgb(59, 182, 59);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 15px;
+  height: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+
+  background-color: #f2f2f2;
+  height: 110px;
+  padding: 10px 0;
+
+}
+
+nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+}
+
+
+.footer {
+  width: auto;
+
+  display: flex;
+  justify-content: space-around;
+  height: 15px;
+}
+
+
+.lang-menu {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.lang-menu .selected-lang {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.lang-menu .selected-lang:before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.countryflags.io/fr/flat/32.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lang-menu ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.lang-menu ul li {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu ul li a {
+  text-decoration: none;
+  width: 125px;
+  padding: 5px 10px;
+  display: block;
+}
+
+.lang-menu ul li:hover {
+  background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.de:before {
+  background-image: url(https://www.countryflags.io/de/flat/32.png);
+}
+
+.en:before {
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+.fr:before {
+  background-image: url(https://www.countryflags.io/fr/flat/32.png);
+}
+
+.ar:before {
+  background-image: url(https://www.countryflags.io/ae/flat/32.png);
+}
+
+
+.lang-menu:hover ul {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(59, 182, 59);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  height: auto;
+
+}
+
+.element {
+  display: inline-block;
+  color: white;
+  /* padding: 1em;
+            padding-bottom: 1.7em; */
+  width: 9em;
+  border-radius: 50em 50em 0 0;
+  text-align: center;
+}
+
+.footer li {
+  display: inline-block;
+}
+
+.conteneur {
+
+  height: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+
+
+}
+
+
+.accueil {
+  width: 85%;
+  height: auto;
+  margin: 8em 1em 1em 1em;
+  padding: 1em;
+  background-color: rgba(119, 119, 119, 0.8);
+  color: white;
+  /* overflow: scroll; */
+  box-shadow: 7px 7px 7px black;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+div#slider {
+  overflow: hidden;
+}
+
+div#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
+.logos {
+  width: 20%;
+}
+
+.articlevent img {
+  width: 400px;
+  border-radius: 20%;
+}
+
+.articlevent p {
+  font-size: 16px;
+}
+
+.articlepres img {
+  width: 450px;
+  border-radius: 15%;
+}
+
+.articlepres p {
+  font-size: 16px;
+}
+
+.articlepres figcaption {
+  text-align: center;
+}
+
+#event1 {
+  padding-top: 2em;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  width: 10%;
+  min-width: 100px;
+  float: left;
+  position: relative;
+  font-size: 18px;
+  padding-right: 5%;
+}
+
+#event1 ul {
+
+  padding: 0;
+  margin: 10;
+  list-style: none;
+  text-align: center;
+}
+
+#event1 li {
+
+  background-image: -webkit-linear-gradient(top, rgb(59, 182, 59) 0%, #333A40 100%);
+  border-radius: 0px;
+  margin-bottom: 0px;
+  box-shadow: 5px 5px 5px #777;
+  border: solid 2px #333A40;
+}
+
+
+
+#event1 a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 2px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+
+#event1 ul li a,
+#event1 li:hover li a {
+  font-size: 1em;
+}
+
+#event1 li:hover {
+  background: #999;
+}
+
+#event1 li li:hover {
+  background: #999;
+}
+
+#event1 ul li:last-child {
+
+  border: none;
+}
+
+#event1 li:hover li {
+  max-height: 15em;
+}
+
+
+/* 48em = 768px */
+
+
+@media screen and (min-width: 1100px) {
+
+  .menu1 {
+    display: none;
+  }
+
+  .menu2 {
+    display: none;
+  }
+
+  .googleCalendar {
+    width: 320px;
+    height: 240px;
+    margin: 0;
+    padding: 0;
+    position: center;
+
+  }
+
+  #histoire {
+    padding-top: 20em;
+    margin: 0em 0 0 -1.3em;
+    list-style: none;
+    text-align: center;
+    width: 10%;
+    min-width: 100px;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    padding-left: 2%;
+  }
+
+  #histoire ul {
+
+    padding: 0;
+    margin: 10;
+    list-style: none;
+    text-align: center;
+  }
+
+  #histoire li {
+
+    background-image: -webkit-linear-gradient(top, rgb(59, 182, 59) 0%, #333A40 100%);
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: 5px 5px 5px #777;
+    border: solid 2px #333A40;
+  }
+
+
+
+  #histoire a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+  }
+
+  #histoire ul li a,
+  #histoire li:hover li a {
+    font-size: 1em;
+  }
+
+  #histoire li:hover {
+    background: #999;
+  }
+
+  #histoire li li:hover {
+    background: #999;
+  }
+
+  #histoire ul li:last-child {
+
+    border: none;
+  }
+
+  #histoire li:hover li {
+    max-height: 15em;
+  }
+
+  #histoire1 {
+    padding-top: 10em;
+    margin: 0em 0 0 -1.3em;
+    list-style: none;
+    text-align: center;
+    width: 10%;
+    min-width: 100px;
+    float: left;
+    position: relative;
+    font-size: 20px;
+    padding-left: 5%;
+  }
+
+  #histoire1 ul {
+
+    padding: 0;
+    margin: 10;
+    list-style: none;
+    text-align: center;
+  }
+
+  #histoire1 li {
+
+    background-image: -webkit-linear-gradient(top, rgb(59, 182, 59) 0%, #333A40 100%);
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: 5px 5px 5px #777;
+    border: solid 2px #333A40;
+  }
+
+
+
+  #histoire1 a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+  }
+
+  #histoire1 ul li a,
+  #histoire1 li:hover li a {
+    font-size: 1em;
+  }
+
+  #histoire1 li:hover {
+    background: #999;
+  }
+
+  #histoire1 li li:hover {
+    background: #999;
+  }
+
+  #histoire1 ul li:last-child {
+
+    border: none;
+  }
+
+  #histoire1 li:hover li {
+    max-height: 15em;
+  }
+
+  #event1 {
+    padding-top: 2em;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    width: 10%;
+    min-width: 100px;
+    float: left;
+    position: relative;
+    font-size: 18px;
+    padding-right: 5%;
+  }
+
+  #event1 ul {
+
+    padding: 0;
+    margin: 10;
+    list-style: none;
+    text-align: center;
+  }
+
+  #event1 li {
+
+    background-image: -webkit-linear-gradient(top, rgb(59, 182, 59) 0%, #333A40 100%);
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: 5px 5px 5px #777;
+    border: solid 2px #333A40;
+  }
+
+
+
+  #event1 a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+  }
+
+  #event1 ul li a,
+  #event1 li:hover li a {
+    font-size: 1em;
+  }
+
+  #event1 li:hover {
+    background: #999;
+  }
+
+  #event1 li li:hover {
+    background: #999;
+  }
+
+  #event1 ul li:last-child {
+
+    border: none;
+  }
+
+  #event1 li:hover li {
+    max-height: 15em;
+  }
+
+  .logo {
+    color: rgba(251, 255, 0, 0.884);
+    animation-duration: 2s;
+    animation-name: slidein;
+    position: absolute;
+  }
+
+  .menu {
+    font-size: 18px;
+  }
+
+  @keyframes slidein {
+    from {
+      left: 5em;
+      width: 25%;
+    }
+
+    to {
+      left: 0;
+      width: 0%;
+    }
+  }
+
+
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+  * {
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+
+  .header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .logo img {
+    width: 100px;
+
+  }
+
+  .lang-menu {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    left: 25%;
+    top: 3px;
+  }
+
+  .lang-menu .selected-lang {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    cursor: pointer;
+  }
+
+  .lang-menu .selected-lang:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lang-menu ul li a {
+    text-decoration: none;
+    width: 125px;
+    padding: 5px 10px;
+    display: block;
+  }
+
+  .lang-menu ul li:hover {
+    background-color: #f2f2f2;
+  }
+
+  .lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .de:before {
+    background-image: url(https://www.countryflags.io/de/flat/32.png);
+  }
+
+  .en:before {
+    background-image: url(https://www.countryflags.io/us/flat/32.png);
+  }
+
+  .fr:before {
+    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+  }
+
+  .lang-menu:hover ul {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(59, 182, 59);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    height: auto;
+    box-sizing: content-box;
+    margin-bottom: -5px;
+  }
+
+  .element {
+    display: inline-block;
+    color: white;
+    /* padding: 1em;
+      padding-bottom: 1.7em; */
+    width: 17em;
+    border-radius: 50em 50em 0 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  footer li {
+    display: inline-block;
+  }
+
+  .conteneur {
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 70%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5%;
+  }
+
+  .accueil {
+    width: 90%;
+    height: auto;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgba(119, 119, 119, 0.8);
+    color: white;
+    box-shadow: 7px 7px 7px black;
+  }
+
+
+  @keyframes slidy {
+    0% {
+      left: 0%;
+    }
+
+    15% {
+      left: 0%;
+    }
+
+    20% {
+      left: -100%;
+    }
+
+    35% {
+      left: -100%;
+    }
+
+    40% {
+      left: -200%;
+    }
+
+    55% {
+      left: -200%;
+    }
+
+    60% {
+      left: -300%;
+    }
+
+    75% {
+      left: -300%;
+    }
+
+    80% {
+      left: -400%;
+    }
+
+    100% {
+      left: -400%;
+    }
+  }
+
+  body {
+    margin: 0;
+  }
+
+  div#slider {
+    overflow: hidden;
+  }
+
+  div#slider figure img {
+    width: 20%;
+    float: left;
+  }
+
+  div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slidy infinite;
+  }
+
+  figure img {
+    height: 480px;
+  }
+
+  .logos {
+    width: 20%;
+  }
+
+  /* Formulaire */
+  form {
+    /* Uniquement centrer le formulaire sur la page */
+    margin: 0 auto;
+    width: 400px;
+    /* Encadré pour voir les limites du formulaire */
+    padding: 1em;
+    border-radius: 1em;
+  }
+
+  form div+div {
+    margin-top: 1em;
+  }
+
+  label {
+    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+    display: block;
+    width: 150px;
+    padding-left: 80px;
+    text-align: center;
+  }
+
+  input,
+  textarea {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+    font: 1em sans-serif;
+
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 1px solid #999;
+  }
+
+  input:focus,
+  textarea:focus {
+    /* Pour souligner légèrement les éléments actifs */
+    border-color: #000;
+  }
+
+  textarea {
+    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+    vertical-align: top;
+
+    /* Pour donner assez de place pour écrire du texte */
+    height: 5em;
+  }
+
+  .button {
+    /* Pour placer le bouton à la même position que les champs texte */
+    padding-left: 90px;
+    /* même taille que les étiquettes */
+  }
+
+  button {
+    /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+    margin-left: .5em;
+  }
+
+  .rotation3d {
+    /* background: yellow; */
+    float: left;
+  }
+
+  .run-rotation {
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+
+  .run-rotation:hover {
+    animation: run-rotation 5s linear infinite;
+  }
+
+  @keyframes run-rotation {
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .card {
+    transform: perspective(200px);
+  }
+
+  .articlevent img {
+    width: 600px;
+    border-radius: 20%;
+  }
+
+  .articlevent p {
+    font-size: 16px;
+  }
+
+  .articlepres img {
+    width: 450px;
+    border-radius: 15%;
+  }
+
+  .articlepres p {
+    font-size: 16px;
+  }
+
+  .articlepres figcaption {
+    text-align: center;
+  }
+
+}
